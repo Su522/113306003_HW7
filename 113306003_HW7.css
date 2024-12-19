@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.main-container {
+    width: 900px;
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.left-panel {
+    width: 35%;
+    background: linear-gradient(to bottom, #001f3f, #0074D9);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo-panel img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.text-panel {
+    margin-top: 20px;
+}
+
+.text-panel h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.text-panel h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #555;
+    padding-bottom: 5px;
+}
+
+.text-panel p {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px;
+    display: block;
+    margin: 20px auto 0;
+}
+
+
+.right-panel {
+    width: 65%;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: 1.5em;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+}
+
+.section ul li span {
+    font-weight: bold;
+}
+
+.music {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.music a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.music a img {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 5px;
+}

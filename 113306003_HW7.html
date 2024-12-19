@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benson's Portfolio</title>
+    <link rel="stylesheet" href="113306003_HW7.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-panel">
+            <div class="photo-panel">
+                 <td rowspan="4"><img src="113306003.jpg" alt="個人照片" width="200"></td>
+                 <button id="editButton" class="button"></button>
+            </div>
+            <div class="text-panel">
+                <h1>BENSON</h1>
+                <h2>ABOUT ME</h2>
+                <p>
+                    I am a freshman in the Department of Management Information Systems at National Chengchi University.
+                    I am interested in studying programming and computer science fundamentals. I have experience
+                    in writing Java, HTML, CSS, JavaScript, and Python.
+                </p>
+                <h2>CONTACT</h2>
+                <p>113306003@g.nccu.edu.tw</p>
+               <img src="school_logo.png" alt="學校Logo" width="100">
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="section">
+                <h2>Education</h2>
+                <ul>
+                    <li><span>2023 - now:</span> National Chengchi University, Department of MIS</li>
+                    <li><span>2021 - 2023:</span> Keelung Senior High School, Partcipated in computer science club</li>
+                    <li><span>2018 - 2021:</span> Middle School Graduation, Started developing an interest in computer science</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Homework List</h2>
+                <ul>
+                    <li><a href="https://github.com/Su522/HW1.git">HW1</a>-https://github.com/Su522/HW1.git</li>
+                    <li><a href="HW2.html">HW2</a>-HW2.html</li>
+                    <li><a href="https://github.com/Su522/HW3.git">HW3</a>-https://github.com/Su522/HW3.git</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Favorite Music</h2>
+                <div class="music">
+                    <a href="https://youtu.be/7HgJIAUtICU?si=iq0aPdgVi_PXj31z"><img src="spotify_logo.png" alt="音樂圖示" width="100"> <span>踊り子</span></a>
+                    <a href="https://youtu.be/Z7i7iZnZ0vQ?si=igMI-t5hEMWLxcd4"><img src="spotify_logo.png" alt="音樂圖示" width="100"> <span>在這個年代找不到浪漫</span></a>
+                    <a href="https://youtu.be/catpLpGals0?si=OAXMa-J645qxwIbh"><img src="spotify_logo.png" alt="音樂圖示" width="100"><span>無垢</span></a>
+                    <a href="https://youtu.be/wNgMsMCyUgo?si=Ur1mAl8XgoFeG3t5"><img src="spotify_logo.png" alt="音樂圖示" width="100"><span>Never Gonna Stop</span></a>
+                </div>
+            </div>
+             <button id="addMusicButton" class="btn-primary">Add</button>
+             <script>
+                 // 編輯名稱功能
+                const editable = document.getElementById('editable');
+                const editButton = document.getElementById('editButton');
+
+                editButton.addEventListener('click', () => {
+                const isEditable = editable.contentEditable === 'true';
+                editable.contentEditable = !isEditable;
+                editButton.textContent = isEditable ? 'Edit' : 'Save';
+                if (!isEditable) editable.focus();
+                    });
+
+                // 添加音樂功能
+                const addMusicButton = document.getElementById('addMusicButton');
+                const musicArea = document.getElementById('musicArea');
+
+                addMusicButton.addEventListener('click', () => {
+                const link = prompt('請輸入音樂連結:');
+                const name = prompt('請輸入音樂名稱:');
+
+                if (link && name) {
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                    <a href="${link}" target="_blank">
+                    <img src="applemusiclogo.jpg" alt="音樂圖片">
+                    <span>${name}</span>
+                    </a>
+        `               ;
+                    musicArea.appendChild(li);
+                } else {
+                    alert('請填寫所有欄位！');
+                }
+            });
+             </script>
+        </div>
+    </div>
+</body>
+</html>
